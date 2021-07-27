@@ -18,15 +18,15 @@ export class Tab2Page {
   public async showActionSheet(photo: Photo, position: number)
   {
     const actionSheet = await this.actionSheetContoller.create({
-      header: 'Photos',
+      header: 'Фото',
       buttons:[{
-        text: 'Delete',
+        text: 'Удалить',
         role: 'destructive',
         icon: 'trash',
         handler: () => {this.photoService.deletePicture(photo, position);}
       },
       {
-        text: 'Cancel',
+        text: 'Отменить',
         icon: 'close',
         role: 'cancel',
         handler: () => {}
